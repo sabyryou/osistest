@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - SMA Negeri 1 Indonesia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Halaman Admin</h1>
+
+        <!-- Form Login -->
+        <div id="login-form">
+            <h2>Login Admin</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p id="login-error"></p>
+        </div>
+
+        <!-- Form Tambah Artikel (tersembunyi sampai login) -->
+        <div id="admin-panel" style="display: none;">
+            <h2>Tambah Artikel Baru</h2>
+            <form id="article-form">
+                <input type="text" id="title" placeholder="Judul Artikel" required>
+                <input type="date" id="date" required>
+                <textarea id="summary" placeholder="Ringkasan Artikel" required></textarea>
+                <textarea id="content" placeholder="Isi Lengkap Artikel" required></textarea>
+                <input type="text" id="image" placeholder="Nama File Gambar (contoh: article1.jpg)" required>
+                <button type="submit">Tambah Artikel</button>
+            </form>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMA Negeri 1 Indonesia - Beranda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header dengan nama sekolah dan navigasi -->
+    <header>
+        <div class="container">
+            <h1>SMA Negeri 1 Indonesia</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#articles">Artikel</a></li>
+                    <li><a href="#gallery">Galeri</a></li>
+                    <li><a href="#osis">OSIS</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Konten utama -->
+    <main>
+        <!-- Kolom Artikel -->
+        <section id="articles" class="section">
+            <div class="container">
+                <h2>Artikel Sekolah</h2>
+                <div id="articles-container" class="articles-grid">
+                    <!-- Artikel akan dimuat dari localStorage via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Arsip Foto (Galeri) -->
+        <section id="gallery" class="section">
+            <div class="container">
+                <h2>Arsip Foto Kegiatan</h2>
+                <div class="gallery-grid">
+                    <!-- Foto galeri diisi manual dari folder images -->
+                    <img src="images/gallery1.jpg" alt="Kegiatan 1">
+                    <img src="images/gallery2.jpg" alt="Kegiatan 2">
+                    <!-- Tambahkan lebih banyak img tag sesuai kebutuhan -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Keterangan OSIS -->
+        <section id="osis" class="section">
+            <div class="container">
+                <h2>Keterangan OSIS</h2>
+                <div class="osis-layout">
+                    <div class="osis-text">
+                        <p>OSIS SMA Negeri 1 Indonesia adalah organisasi siswa yang bertujuan untuk mengembangkan potensi siswa melalui kegiatan ekstrakurikuler, sosial, dan pendidikan. Visi kami adalah menciptakan siswa yang berprestasi, berakhlak mulia, dan peduli lingkungan.</p>
+                        <p>Struktur OSIS terdiri dari Ketua, Wakil Ketua, Sekretaris, Bendahara, dan beberapa bidang seperti Kesiswaan, Olahraga, dan Seni.</p>
+                    </div>
+                    <div class="osis-image">
+                        <img src="images/osis.jpg" alt="Logo OSIS">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal untuk detail artikel -->
+    <div id="article-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-date"></p>
+            <img id="modal-image" src="" alt="">
+            <p id="modal-content"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
